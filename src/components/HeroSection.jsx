@@ -46,19 +46,6 @@ const HeroSection = () => {
                 </div>
 
             </main>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, dolorem totam harum qui, expedita numquam ab saepe molestias hic officiis quod quaerat placeat sit perspiciatis a, deserunt tenetur distinctio aut.
-                Blanditiis optio asperiores voluptatem laborum fugit suscipit numquam incidunt dolorum eius rerum iusto ea porro magni similique consequatur aperiam, facilis labore adipisci debitis tempore magnam soluta. Fugit accusantium tenetur earum!
-                Architecto quam molestias neque eos ipsum dolorem at blanditiis optio, corrupti repellendus natus commodi ex recusandae a deleniti doloremque necessitatibus tempora laborum totam error officiis maxime alias! Sunt, fugit ad.
-                Eius, asperiores? Odio, dolores quae? Delectus, commodi reprehenderit! Esse nostrum facere perferendis fuga reprehenderit. Explicabo, maiores, vitae aliquam reiciendis officiis quo quaerat consectetur repellendus voluptatem dolores molestiae. Praesentium, ipsum reprehenderit.
-                Velit modi tenetur nisi ea cumque. Eius corrupti nemo aliquid, consequuntur quae quam. Earum ad, minus corporis aliquam nostrum vitae magni praesentium beatae libero voluptatem veniam cum eius sunt explicabo!
-                Consequatur, quasi? Quo nostrum, libero ullam dolor iste tempora ut beatae ratione unde sint est illo itaque dolore placeat expedita sequi pariatur voluptatibus officiis, alias nesciunt. Quia reiciendis accusantium illum.
-                Repudiandae delectus voluptatum a cum saepe accusamus magnam magni nemo labore? Numquam ullam, ipsa labore fuga accusamus blanditiis qui laudantium aspernatur aperiam, ea cupiditate minima debitis quae fugit maiores tenetur.
-                Ab, sunt assumenda fuga eum aliquid saepe fugiat placeat nihil amet repellat facilis minima in at culpa hic corrupti minus suscipit labore totam numquam? Earum, quo architecto. Incidunt, quae maiores.
-                Sunt quasi dolor laudantium similique, assumenda neque consequatur magnam facilis reiciendis ducimus, nemo rem ab dicta accusamus at tenetur possimus nobis perspiciatis. Minima laborum maiores corrupti voluptate quod, magni blanditiis?
-                Autem, odit. Corporis quaerat aperiam quibusdam eveniet recusandae vero, consequuntur quas, tenetur, aliquid deleniti quidem? Est, unde necessitatibus modi, itaque quidem asperiores sed magni praesentium non iure animi similique illo.
-            </p>
         </>
     )
 }
