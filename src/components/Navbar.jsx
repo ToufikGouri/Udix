@@ -6,11 +6,11 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='flex h-16 w-full text-white items-center justify-around font-myHeadlines absolute top-0 z-10'>
+            <nav className='h-16 w-full text-white flex items-center justify-around font-myHeadlines absolute top-0 z-10'>
                 <div className='flex items-center justify-around w-full md:w-auto'>
 
                     {/* LOGO */}
-                    <h1 className="text-3xl italic font-bold pr-16 hover:cursor-pointer">udix.</h1>
+                    <a className="text-3xl italic font-bold pr-16" href='/'>udix.</a>
 
                     {/* mobile screen Menu button */}
                     <button className={`md:hidden border-2 border-white px-3 py-1 ${isMenuBtn ? "text-hoverBlack border-hoverBlack" : ""}`} onClick={() => setIsMenuBtn(!isMenuBtn)}> MENU </button>
@@ -30,7 +30,7 @@ const Navbar = () => {
 
                         <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><a href="/">HOME</a></li>
                         <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><a href="/">BLOG</a></li>
-                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><a href="/">PRODUCT</a></li>
+                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><a href="/product">PRODUCT</a></li>
                         <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><a href="/">CONTACTS</a></li>
 
                         <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4 max-md:block hidden'><button className='py-1 px-2 font-medium rounded text-myBlue border-2 border-myBlue'>SIGN IN</button></li>
