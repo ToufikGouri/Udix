@@ -1,6 +1,7 @@
 import React from 'react'
 import Content1Img from '../assets/content1.png'
 import Content2Img from '../assets/content2.png'
+import Divider from '../assets/divider.png'
 
 const ContentSection = () => {
     return (
@@ -36,6 +37,8 @@ const ContentSection = () => {
                         </div>
                     </div>
                 </div>
+
+                <img className='mt-20' src={Divider} alt="Section divider" />
             </div>
         </>
     )
