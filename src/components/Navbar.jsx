@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     // make active link color myYellow 
@@ -10,7 +11,7 @@ const Navbar = () => {
                 <div className='flex items-center justify-around w-full md:w-auto'>
 
                     {/* LOGO */}
-                    <a className="text-3xl italic font-bold pr-16" href='/'>udix.</a>
+                    <Link className="text-3xl italic font-bold pr-16" to='/'>udix.</Link>
 
                     {/* mobile screen Menu button */}
                     <button className={`md:hidden border-2 border-white px-3 py-1 ${isMenuBtn ? "text-hoverBlack border-hoverBlack" : ""}`} onClick={() => setIsMenuBtn(!isMenuBtn)}> MENU </button>
@@ -28,10 +29,10 @@ const Navbar = () => {
                             border: '1px solid rgba(255, 255, 255, 0.14)',
                         } : null}>
 
-                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><a href="/">HOME</a></li>
-                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><a href="/">BLOG</a></li>
-                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><a href="/product">PRODUCT</a></li>
-                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><a href="/">CONTACTS</a></li>
+                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><Link to="/">HOME</Link></li>
+                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><Link to="/">BLOG</Link></li>
+                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><Link to="/product">PRODUCT</Link></li>
+                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><Link to="/contact">CONTACTS</Link></li>
 
                         <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4 max-md:block hidden'><button className='py-1 px-2 font-medium rounded text-myBlue border-2 border-myBlue'>SIGN IN</button></li>
                         <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4 max-md:block hidden'><button className='py-1 px-2 font-medium rounded bg-myBlue border-2 border-myBlue'>SIGN UP</button></li>
