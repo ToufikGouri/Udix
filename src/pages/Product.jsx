@@ -33,8 +33,8 @@ const Product = () => {
                     <div className="card2 bg-myLightRed w-4/5 sm:w-1/4 hover:shadow-lg cursor-pointer my-3">
                         <div className="m-5 text-white">
                             <img src={Card2Logo} alt="Target on goals" />
-                            <h1 className='font-myHeadlines font-extrabold text-xl my-6'>CRM Product</h1>
-                            <p className='font-myText font-normal'>Some networks believe that by only offering. </p>
+                            <h1 className='font-myHeadlines font-extrabold text-xl my-6'>Web Services</h1>
+                            <p className='font-myText font-normal'>Service based on web are also available. </p>
                             <img className='mt-10' src={Arrow} alt="Arrow poiting right" />
                         </div>
                     </div>
@@ -42,8 +42,8 @@ const Product = () => {
                     <div className="card3 w-4/5 sm:w-1/4 hover:shadow-lg cursor-pointer my-3">
                         <div className="m-5">
                             <img src={Card3Logo} alt="Target on goals" />
-                            <h1 className='font-myHeadlines font-extrabold text-xl my-6'>CRM Product</h1>
-                            <p className='font-myText font-normal'>Some networks believe that by only offering. </p>
+                            <h1 className='font-myHeadlines font-extrabold text-xl my-6'>Mobile App</h1>
+                            <p className='font-myText font-normal'>Mobile based all type of consultancy and services. </p>
                             <img className='mt-10' src={Arrow} alt="Arrow poiting right" />
                         </div>
                     </div>
