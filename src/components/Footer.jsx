@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <>
-            <div className="bg-myBlack flex justify-center text-white border-t">
+            <footer className="bg-myBlack flex justify-center text-white border-t">
 
                 <div className='w-3/4 py-10 flex justify-around max-md:flex-col-reverse'>
 
@@ -34,7 +34,7 @@ const Footer = () => {
 
                 </div>
 
-            </div>
+            </footer>
         </>
     )
 }
