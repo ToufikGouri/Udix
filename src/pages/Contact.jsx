@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from '../components/Modal';
 
 const Contact = () => {
+
+    const [modalOpen, setModalOpen] = useState(false);
+
     return (
         <>
             <div className='h-screen text-center flex flex-col sm:justify-center items-center bg-myBlack text-white'>
@@ -11,10 +15,15 @@ const Contact = () => {
 
                 <div className="inputs my-5 sm:my-12">
                     <input className='bg-myBlack font-myText text-xl sm:text-2xl p-3 px-8 sm:mx-3 max-sm:my-3 brightness-125 placeholder-hoverBlack placeholder:font-light' type="text" placeholder='Name' />
-                    <button className='bg-myRed font-myText text-xl sm:text-2xl p-3 px-8 sm:mx-3 max-sm:my-3 font-bold hover:bg-hoverRed' >Subscribe</button>
+                    <button className='bg-myRed font-myText text-xl sm:text-2xl p-3 px-8 sm:mx-3 max-sm:my-3 font-bold hover:bg-hoverRed' onClick={() => setModalOpen(true)}>Subscribe</button>
                 </div>
 
                 <p className='font-myText text-hoverBlack font-normal text-base sm:text-xl'>WARNING: once you join udix you <br /> will lose the need for any other landing page</p>
+
+                <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+                    <h2 className="text-xl mb-2">Thank you for your request</h2>
+                    <p>This feature is coming soon till then please explore the page.</p>
+                </Modal>
 
             </div>
         </>

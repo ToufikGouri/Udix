@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HeroImg from '../assets/heroImg.png'
 import HeroLeft from '../assets/heroLeft.png'
 import HeroRight from '../assets/heroRight.png'
 import Star from '../assets/star.png'
+import Modal from './Modal'
 
 const HeroSection = () => {
+
+    const [modalOpen, setModalOpen] = useState(false); 
+    
     return (
         <>
             <main className="heroSection h-screen md:flex bg-no-repeat bg-cover" style={{ backgroundImage: `url(${HeroImg})` }}>
@@ -35,7 +39,7 @@ const HeroSection = () => {
                             <input type="text" className='border-inherit border-2 p-2 my-2 text-sm w-full' placeholder='Phone Number' />
                             <input type="text" className='border-inherit border-2 p-2 my-2 text-sm w-full' placeholder='Company Name' />
 
-                            <button className='p-2 px-6 my-2 font-bold text-sm font-myHeadlines border-2 text-white bg-myBlue hover:bg-white hover:text-hoverBlue hover:border-hoverBlue '>Sign up</button>
+                            <button className='p-2 px-6 my-2 font-bold text-sm font-myHeadlines border-2 text-white bg-myBlue hover:bg-white hover:text-hoverBlue hover:border-hoverBlue' onClick={() => setModalOpen(true)}>Sign up</button>
                         </div>
 
                         <p className='font-myText ml-12 mb-12 max-lg:text-xs max-lg:ml-8'>Support: <span className='text-myBlue'>help@udix.com</span></p>
@@ -44,6 +48,11 @@ const HeroSection = () => {
 
                     </div>
                 </div>
+
+                <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+                    <h2 className="text-xl mb-2">Thank you for your request</h2>
+                    <p>This feature is coming soon till then please explore the page.</p>
+                </Modal>
 
             </main>
         </>

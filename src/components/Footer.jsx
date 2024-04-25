@@ -1,7 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Footer = () => {
+
+    const { pathname } = useLocation()
+
     return (
         <>
             <footer className="bg-myBlack flex justify-center text-white border-t">
@@ -19,10 +22,10 @@ const Footer = () => {
                         </div>
 
                         <ul className="flex max-md:justify-center">
-                            <li className='font-medium pr-3 hover:text-hoverBlack max-md:my-4'><Link to="/">HOME</Link></li>
-                            <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><Link to="/">BLOG</Link></li>
-                            <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4'><Link to="/product">PRODUCT</Link></li>
-                            <li className='font-medium pl-3 hover:text-hoverBlack max-md:my-4'><Link to="/contact">CONTACTS</Link></li>
+                            <li className={`font-medium pr-3 hover:text-hoverBlack max-md:my-4 ${pathname == "/" ? "text-myYellow" : ""}`}><Link to="/">HOME</Link></li>
+                            <li className={`font-medium px-3 hover:text-hoverBlack max-md:my-4 ${pathname == "/product" ? "text-myYellow" : ""}`}><Link to="/product">PRODUCT</Link></li>
+                            <li className={`font-medium px-3 hover:text-hoverBlack max-md:my-4 ${pathname == "/pricing" ? "text-myYellow" : ""}`}><Link to="/pricing">PRICING</Link></li>
+                            <li className={`font-medium pl-3 hover:text-hoverBlack max-md:my-4 ${pathname == "/contact" ? "text-myYellow" : ""}`}><Link to="/contact">CONTACTS</Link></li>
                         </ul>
                     </div>
 

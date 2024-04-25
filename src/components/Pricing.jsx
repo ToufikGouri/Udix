@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from './Modal'
 
 const Pricing = () => {
+    const [modalOpen, setModalOpen] = useState(false);
+
     return (
         <>
             <div className="navbarBgHandler h-16 bg-myLightRed"></div>
@@ -20,7 +23,7 @@ const Pricing = () => {
                             <p className='text-hoverBlack my-2'>Fast start your business with this.</p>
                             <p className='my-2'>$ <span className='font-myHeadlines text-3xl font-bold'>69</span> /mo</p>
 
-                            <button className='font-myHeadlines m-5 rounded py-1 px-2 font-bold text-myBlue border-2 border-myBlue hover:text-hoverBlue hover:border-hoverBlue'>SIGN UP NOW</button>
+                            <button className='font-myHeadlines m-5 rounded py-1 px-2 font-bold text-myBlue border-2 border-myBlue hover:text-hoverBlue hover:border-hoverBlue' onClick={() => setModalOpen(true)}>SIGN UP NOW</button>
 
                             <p className='my-2'>3 Months of Data Retention</p>
                             <p className='my-2'>20 Active Campaigns</p>
@@ -42,7 +45,7 @@ const Pricing = () => {
                             <p className='text-hoverBlack my-2'>Start tracking your affiliate campaigns.</p>
                             <p className='my-2 text-myBlue'>$ <span className='font-myHeadlines text-3xl font-bold'>169</span> /mo</p>
 
-                            <button className='font-myHeadlines m-5 rounded py-1 px-2 font-bold text-myBlue border-2 border-myBlue hover:text-hoverBlue hover:border-hoverBlue'>SIGN UP NOW</button>
+                            <button className='font-myHeadlines m-5 rounded py-1 px-2 font-bold text-myBlue border-2 border-myBlue hover:text-hoverBlue hover:border-hoverBlue' onClick={() => setModalOpen(true)}>SIGN UP NOW</button>
 
                             <p className='my-2'>3 Months of Data Retention</p>
                             <p className='my-2'>20 Active Campaigns</p>
@@ -64,7 +67,7 @@ const Pricing = () => {
                             <p className='text-hoverBlack my-2'>Start tracking your affiliate campaigns.</p>
                             <p className='my-2 text-myRed'>$ <span className='font-myHeadlines text-3xl font-bold'>269</span> /mo</p>
 
-                            <button className='font-myHeadlines m-5 rounded py-1 px-2 font-bold text-myBlue border-2 border-myBlue hover:text-hoverBlue hover:border-hoverBlue'>SIGN UP NOW</button>
+                            <button className='font-myHeadlines m-5 rounded py-1 px-2 font-bold text-myBlue border-2 border-myBlue hover:text-hoverBlue hover:border-hoverBlue' onClick={() => setModalOpen(true)}>SIGN UP NOW</button>
 
                             <p className='my-2'>3 Months of Data Retention</p>
                             <p className='my-2'>20 Active Campaigns</p>
@@ -84,6 +87,11 @@ const Pricing = () => {
 
                     </div>
                 </div>
+
+                <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+                    <h2 className="text-xl mb-2">Thank you for your request</h2>
+                    <p>This feature is coming soon till then please explore the page.</p>
+                </Modal>
 
             </div>
         </>

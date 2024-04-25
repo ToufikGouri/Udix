@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import Modal from './Modal'
 
 const Navbar = () => {
     const [isMenuBtn, setIsMenuBtn] = useState(false)
+    const [modalOpen, setModalOpen] = useState(false);
     const { pathname } = useLocation()
 
     return (
@@ -34,15 +36,22 @@ const Navbar = () => {
                         <li className={`font-medium px-3 hover:text-hoverBlack max-md:my-4 ${pathname == "/pricing" ? "text-myYellow" : ""}`} ><Link to="/pricing">PRICING</Link></li>
                         <li className={`font-medium px-3 hover:text-hoverBlack max-md:my-4 ${pathname == "/contact" ? "text-myYellow" : ""}`} ><Link to="/contact">CONTACTS</Link></li>
 
-                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4 max-md:block hidden'><button className='py-1 px-2 font-medium rounded text-myBlue border-2 border-myBlue'>SIGN IN</button></li>
-                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4 max-md:block hidden'><button className='py-1 px-2 font-medium rounded bg-myBlue border-2 border-myBlue'>SIGN UP</button></li>
+                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4 max-md:block hidden'><button className='py-1 px-2 font-medium rounded text-myBlue border-2 border-myBlue' onClick={() => setModalOpen(true)}>SIGN IN</button></li>
+                        <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4 max-md:block hidden'><button className='py-1 px-2 font-medium rounded bg-myBlue border-2 border-myBlue' onClick={() => setModalOpen(true)}>SIGN UP</button></li>
                     </ul>
                 </div>
 
                 <div className='hidden md:block'>
-                    <button className='mx-4 font-medium text-myBlue hover:text-hoverBlue'>SIGN IN</button>
-                    <button className='mx-4 py-1 px-2 font-medium text-myBlue border-2 border-myBlue hover:text-hoverBlue hover:border-hoverBlue '>SIGN UP</button>
+                    <button className='mx-4 font-medium text-myBlue hover:text-hoverBlue' onClick={() => setModalOpen(true)}>SIGN IN</button>
+                    <button className='mx-4 py-1 px-2 font-medium text-myBlue border-2 border-myBlue hover:text-hoverBlue hover:border-hoverBlue' onClick={() => setModalOpen(true)}>SIGN UP</button>
                 </div>
+
+
+                <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+                    <h2 className="text-xl mb-2">Thank you for your request</h2>
+                    <p>This feature is coming soon till then please explore the page.</p>
+                </Modal>
+
             </nav>
 
         </>
