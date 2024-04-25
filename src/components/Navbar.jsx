@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
     const [isMenuBtn, setIsMenuBtn] = useState(false)
-    const [active, setActive] = useState("HOME")
+    const { pathname } = useLocation()
 
     return (
         <>
@@ -29,10 +29,10 @@ const Navbar = () => {
                             border: '1px solid rgba(255, 255, 255, 0.14)',
                         } : null}>
 
-                        <li className={`font-medium px-3 hover:text-hoverBlack max-md:my-4 ${active == "HOME" ? "text-myYellow" : ""}`} onClick={()=> setActive("HOME")} ><Link to="/">HOME</Link></li>
-                        <li className={`font-medium px-3 hover:text-hoverBlack max-md:my-4 ${active == "BLOG" ? "text-myYellow" : ""}`} onClick={()=> setActive("BLOG")} ><Link to="/">BLOG</Link></li>
-                        <li className={`font-medium px-3 hover:text-hoverBlack max-md:my-4 ${active == "PRODUCT" ? "text-myYellow" : ""}`} onClick={()=> setActive("PRODUCT")} ><Link to="/product">PRODUCT</Link></li>
-                        <li className={`font-medium px-3 hover:text-hoverBlack max-md:my-4 ${active == "CONTACTS" ? "text-myYellow" : ""}`} onClick={()=> setActive("CONTACTS")} ><Link to="/contact">CONTACTS</Link></li>
+                        <li className={`font-medium px-3 hover:text-hoverBlack max-md:my-4 ${pathname == "/" ? "text-myYellow" : ""}`} ><Link to="/">HOME</Link></li>
+                        <li className={`font-medium px-3 hover:text-hoverBlack max-md:my-4 ${pathname == "/product" ? "text-myYellow" : ""}`} ><Link to="/product">PRODUCT</Link></li>
+                        <li className={`font-medium px-3 hover:text-hoverBlack max-md:my-4 ${pathname == "/pricing" ? "text-myYellow" : ""}`} ><Link to="/pricing">PRICING</Link></li>
+                        <li className={`font-medium px-3 hover:text-hoverBlack max-md:my-4 ${pathname == "/contact" ? "text-myYellow" : ""}`} ><Link to="/contact">CONTACTS</Link></li>
 
                         <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4 max-md:block hidden'><button className='py-1 px-2 font-medium rounded text-myBlue border-2 border-myBlue'>SIGN IN</button></li>
                         <li className='font-medium px-3 hover:text-hoverBlack max-md:my-4 max-md:block hidden'><button className='py-1 px-2 font-medium rounded bg-myBlue border-2 border-myBlue'>SIGN UP</button></li>

@@ -6,6 +6,7 @@ import './App.css'
 import Product from './pages/Product'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
+import Pricing from './components/Pricing'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/product' element={<Product />} />
+          <Route path='/pricing' element={<Pricing />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
         <Footer />
