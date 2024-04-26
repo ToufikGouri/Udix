@@ -16,7 +16,7 @@ const Modal = ({ isOpen, onClose, children }) => {
 
     return (
         <div className="fixed text-black top-0 left-0 z-50 w-full h-full flex items-center justify-center bg-black bg-opacity-50 modal-overlay">
-            <div className="bg-white flex flex-col text-start rounded-lg shadow-md overflow-hidden w-full max-w-md">
+            <div className="bg-white flex flex-col text-start rounded-lg shadow-md overflow-hidden mx-4 w-full max-w-md">
                 <div className="p-6">{children}</div> {/* Props text content */}
                 <button className="bg-myBlue border-2 mb-3 mx-3 self-end text-white px-4 py-2 rounded-lg hover:bg-white hover:text-hoverBlue hover:border-hoverBlue" onClick={onClose}>
                     Close
