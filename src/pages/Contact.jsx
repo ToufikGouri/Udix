@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Modal from '../components/Modal';
 
 const Contact = () => {
 
     const [modalOpen, setModalOpen] = useState(false);
+    useEffect(() => {
+        document.title = "Contacts - Udix"
+      }, [])
+    
 
     return (
         <>

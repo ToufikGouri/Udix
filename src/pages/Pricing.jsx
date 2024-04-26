@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
-import Modal from './Modal'
+import React, { useEffect, useState } from 'react'
+import Modal from '../components/Modal'
 
 const Pricing = () => {
     const [modalOpen, setModalOpen] = useState(false);
+    useEffect(() => {
+        document.title = "Pricing - Udix"
+      }, [])    
 
     return (
         <>

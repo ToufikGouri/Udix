@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Card1Logo from '../assets/card1Logo.png'
 import Card2Logo from '../assets/card2Logo.png'
 import Card3Logo from '../assets/card3Logo.png'
 import Arrow from '../assets/arrow.png'
 
 const Product = () => {
-    // onClick of card do something
+    useEffect(() => {
+        document.title = "Product - Udix"
+      }, [])    
 
     return (
         <>
@@ -21,7 +23,7 @@ const Product = () => {
 
                 {/* Cards Content */}
                 <div className="Cards flex flex-col items-center sm:flex-row justify-evenly mt-7 lg:w-3/5">
-                    <div className="card1 w-4/5 sm:w-1/4 hover:shadow-lg cursor-pointer my-3">
+                    <div className="card1 w-4/5 sm:w-1/4 hover:shadow-2xl cursor-pointer my-3">
                         <div className='m-5'>
                             <img src={Card1Logo} alt="Target on goals" />
                             <h1 className='font-myHeadlines font-extrabold text-xl my-6'>CRM Product</h1>
@@ -30,7 +32,7 @@ const Product = () => {
                         </div>
                     </div>
 
-                    <div className="card2 bg-myLightRed w-4/5 sm:w-1/4 hover:shadow-lg cursor-pointer my-3">
+                    <div className="card2 bg-myLightRed w-4/5 sm:w-1/4 hover:shadow-2xl cursor-pointer my-3">
                         <div className="m-5 text-white">
                             <img src={Card2Logo} alt="Target on goals" />
                             <h1 className='font-myHeadlines font-extrabold text-xl my-6'>Web Services</h1>
@@ -39,7 +41,7 @@ const Product = () => {
                         </div>
                     </div>
 
-                    <div className="card3 w-4/5 sm:w-1/4 hover:shadow-lg cursor-pointer my-3">
+                    <div className="card3 w-4/5 sm:w-1/4 hover:shadow-2xl cursor-pointer my-3">
                         <div className="m-5">
                             <img src={Card3Logo} alt="Target on goals" />
                             <h1 className='font-myHeadlines font-extrabold text-xl my-6'>Mobile App</h1>

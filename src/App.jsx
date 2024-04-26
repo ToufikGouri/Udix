@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Product from './pages/Product'
 import Contact from './pages/Contact'
+import Pricing from './pages/Pricing'
 import Footer from './components/Footer'
-import Pricing from './components/Pricing'
 
 function App() {
 
